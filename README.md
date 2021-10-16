@@ -31,3 +31,9 @@ This library is ment to be included into future C++ projects that are versioned 
   - custom format based on Microsoft
 - defaults.cfg
   - default formating
+
+## Install
+- place all files in your main directory
+- install pre-commit hook with `pre-commit install`
+- on every `git commit -a "something"` it will run the hooks and if they pass, it will commit
+- to run the pre-commit on every file `pre-commit run -a`

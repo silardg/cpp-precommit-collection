@@ -1,0 +1,16 @@
+fail_fast: false
+repos:
+  - repo: https://github.com/pocc/pre-commit-hooks
+    rev: v1.3.4
+    hooks:
+      - id: clang-format
+        args: [--style=file]
+        #exclude: path/file
+      - id: cppcheck
+        args: ["--language=c++","--enable=performance,unusedFunction","--std=c++11"]
+        #exclude: path/file
+      - id: cpplint
+        args: [ "--filter=-build/include_order,-build/include_subdir,-whitespace/indent,-whitespace/braces,-whitespace/line_length,-readability/casting,-whitespace/parens",
+                "--extensions=hpp,cpp,c,h"]
+                #"--exclude=lib/ArduinoJson/"]
+        #exclude: path/file
